@@ -89,7 +89,7 @@
         // ------------------------------------------------------------------------------------------
         // -- Private methods
         // ------------------------------------------------------------------------------------------
-        function _runCallback (eventName, data) {
+        function _runCallback (eventName, data) { if( _mappings[eventName] == null ) { return; } // lpt once null bomb if fix line 92
             for (var id in _mappings[eventName].callbacks)
             {
                 var callbackObject = _mappings[eventName].callbacks[id];
